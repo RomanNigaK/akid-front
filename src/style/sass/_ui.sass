@@ -1,0 +1,373 @@
+.input
+    &__data
+        height: 40px
+        border-radius: 5px
+        border-width: 1px
+        border-style: solid
+        border-color: $darkgreen-60
+        input
+            height: 100%
+            width: 100%
+            padding-left: 15px
+            border-radius: 4px
+            padding-right: 22px
+            &::placeholder
+                color: $placeholder
+            &:focus                
+                background: $active-input
+                
+            &.down
+                padding-top: 7px
+
+        img
+            cursor: pointer        
+    &__option
+        position: absolute
+        margin-left: -20px
+        margin-top: 10px
+        &-hide
+            display: none
+
+    small
+        position: absolute
+        font-size: 12px
+        margin-left: 5px
+        margin-top: -10px
+        height: 18px
+        background: $darkblue
+        color: $textwhite
+        line-height: 18px
+        padding: 0px 10px
+        border-radius: 10px
+        animation-name: showPlaceholder
+        animation-iteration-count: 1
+        animation-duration: 0.5s
+
+    &__error
+        color: red
+        font-size: 13px
+        margin: 5px 25px
+        &::before
+            content: "*- "
+            
+    &__description
+        font-size: 10px
+        text-align: center
+        color: $placeholder
+        padding: 0px 10px
+        margin-top: -15px            
+
+.textarea
+    &__data
+        height: 100px
+        border-radius: 5px
+        border-width: 1px
+        border-style: solid
+        border-color: $darkgreen-60
+        textarea
+            box-sizing: border-box
+            height: 100%
+            width: 100%
+            border: none
+            border-radius: 4px
+            padding-top: 7px
+            resize: none
+            overflow: hidden
+            padding: 10px 10px
+            font-size: 12px
+            &::placeholder
+                color: $placeholder
+            &:focus
+                background: $active-input
+            &.down
+                padding: 25px 10px       
+
+    small
+        position: absolute
+        font-size: 12px
+        margin-left: 5px
+        margin-top: -10px
+        height: 18px
+        background: $darkblue
+        color: $textwhite
+        line-height: 18px
+        padding: 0px 10px
+        border-radius: 10px
+        animation-name: showPlaceholder
+        animation-iteration-count: 1
+        animation-duration: 0.5s
+
+    &__error
+        color: red
+        font-size: 13px
+        margin: 5px 25px
+        &::before
+            content: "*- " 
+    &__option
+        display: flex
+        >div
+            margin-left: auto
+            >div
+                display: flex
+                height: 20px
+                border-radius: 3px
+                width: 40px
+                align-items: center
+                justify-content: space-evenly
+                position: absolute
+                margin-left: -41px
+                margin-top: 1px
+                img
+                    cursor: pointer
+    &__description
+        font-size:13px
+        text-align: center
+        color: $placeholder
+        padding: 0px 10px
+        margin-top: -15px
+
+.button
+    height: 40px
+    border-radius: 5px
+    border-style: solid
+    border-width: 1px
+    border-color: $darkgreen
+    &.blue
+         border-color: $darkblue
+    div
+        display: flex
+        align-items: center
+        justify-content: center
+        background: $darkgreen
+        border: 1px solid #fff
+        height: 100%
+        border-radius: 5px
+        color: $textwhite
+        label
+            display: flex
+            align-items: center
+            color: #fff
+            cursor: pointer
+        img
+            width: 25px
+            &.end-loader
+                
+                animation-name: end-loader
+                animation-iteration-count: 1
+                animation-duration: 1s
+            &.loader
+                animation-name: loader
+                animation-iteration-count: infinite
+                animation-duration: 1s                
+        &.blue
+             background: $darkblue
+    &:hover
+        opacity: 0.9    
+        cursor: pointer         
+
+.icon-button
+    height: 30px
+    display: flex
+    align-items: center
+    background: #fff
+    border: none
+    color: $darkblue
+    cursor: pointer
+    position: relative
+    img
+        margin-right: 5px
+    &:hover
+        img
+            rotate: 360deg
+            transition: 0.5s
+
+
+
+.table
+    &__row
+        display: flex
+        align-items: center
+        height: 40px
+        div
+            font-size: 16px
+            color: $placeholder
+
+        &.table-header
+            div
+                font-size: 14px
+        &:not(.table-header):hover
+            div
+                color: #000
+                cursor: pointer      
+    &__cell
+        width: 200px
+        text-align: center
+
+        &-name
+            width: 100%
+            color: $placeholder
+        &-doc
+            width: 400px
+            text-align: center
+            color: $placeholder
+        &-status
+            width: 200px
+            display: flex
+            align-items: center
+            justify-content: center
+            div
+                width: 10px
+                height: 10px
+                border-radius: 5px
+                &.inwork
+                    background: #D2BF13
+                &.inwork
+                    background: #00A34B     
+        
+.popup
+    position: absolute
+    min-width: 500px
+    box-shadow: 2px 4px 10px 0px #3C6E71
+    background: #fff
+    z-index: 5
+    margin-top:5px
+    img
+        float: right
+        margin: 5px
+    ul
+        padding-top: 10px
+        padding-block: 10px
+        li
+            height: 25px
+            display: flex
+            align-items: center
+            color: $placeholder
+            font-size: 15px
+            &:hover
+                color: #000
+                cursor: pointer
+                span
+                    background: $darkgreen
+                    animation-name: marker
+                    animation-iteration-count: 1
+                    animation-duration: 0.5s
+
+            span
+                height: 15px
+                width: 7px
+                background: #fff
+                margin-right: 10px
+    &__not-found
+        display: block 
+        padding: 10px           
+
+.favorites
+    img
+        cursor: pointer
+        &:not(:first-child)
+            margin-left: 5px
+            
+.fast-search
+    height: 40px
+    border-radius: 5px
+    border-width: 1px
+    border-style: solid
+    border-color: $darkgreen-60
+    position: relative
+    input
+        height: 100%
+        width: 100%
+        padding-left: 15px
+        padding-right: 40px
+        border-radius: 4px
+        &::placeholder
+            color: $placeholder
+        &:focus                
+            background: $active-input
+              
+        &.down
+            padding-top: 7px
+    &__img
+        cursor: pointer 
+        position: absolute
+        margin-left: -30px
+        margin-top: 10px
+    small
+        position: absolute
+        font-size: 12px
+        margin-left: 5px
+        margin-top: -10px
+        height: 18px
+        background: $darkblue
+        color: $textwhite
+        line-height: 18px
+        padding: 0px 10px
+        border-radius: 10px
+        animation-name: showPlaceholder
+        animation-iteration-count: 1
+        animation-duration: 0.5s
+
+.selection
+    width: 100%
+    &__item
+        padding-left: 100px
+        border:1px solid $darkgreen-60
+        margin-bottom: 10px
+        padding: 10px
+        display: flex
+        border-radius: 5px
+        &:hover
+            background: #f5f5f5
+    &__marker
+        display: block
+        min-width: 12px
+        width: 12px
+        min-height: 12px
+        height: 12px
+        border: 2px solid $darkblue
+        border-radius: 3px
+        margin-top: 1px
+        cursor: pointer
+        &.circle
+            border-radius: 10px
+        &.checked
+            background: $darkblue     
+    &__data
+        margin-left: 10px
+        b
+            display: block
+            font-size: 14px
+            font-weight: 500 
+        span
+            color: $placeholder 
+            font-size: 14px  
+
+
+
+@keyframes marker
+    0%
+        background: #fff
+    100%
+        background: $darkgreen
+    
+@keyframes showPlaceholder
+    0%
+        opacity: 0
+    100%
+        opacity: 1          
+
+@keyframes loader
+    0%
+        rotate: 0deg
+    100%
+        rotate: 360deg
+
+@keyframes end-loader
+    0%
+        scale: 0
+    100%
+        scale: 1
+ 
+    
+       
+    

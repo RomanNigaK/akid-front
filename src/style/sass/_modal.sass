@@ -1,0 +1,135 @@
+.modal
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 0
+    top: 0
+    background: rgba(217,217,217,.5)
+    z-index: 10
+    animation-name: showModalBg
+    animation-iteration-count: 1
+    animation-duration: 0.3s
+    &__content
+        position: absolute
+        right: 0
+        bottom: 0
+        top: 0
+        background: #fff
+        padding: 10px
+        overflow-x: hidden
+        animation-iteration-count: 1
+        animation-duration: 0.3s
+        &.small
+            animation-name: small
+            width: 400px
+        &.toSmallFromMedium
+            animation-name: toSmallFromMedium
+            width: 400px
+
+        &.medium, &.toMediumFromSmall
+            display: flex
+            form
+                width: 50%
+                &:not(:first-child)
+                    margin-left: 20px
+                    
+            animation-name: medium
+            width: 800px 
+
+        &.toMediumFromSmall
+            animation-name: toMediumFromSmall
+
+
+           
+        &.large
+            animation-name: show-large
+            width: 1200px     
+
+.modalPopup        
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 0
+    top: 0
+    background: #fff
+    z-index: 20
+    background: rgba(255,255,255, 0.6 )
+    display: flex
+    align-items: center
+    justify-content: center
+    
+    &__content
+        border:1px solid #284B63
+        padding: 10px
+        border-radius: 10px
+        background: #fff
+        animation-name: showConfirm
+        animation-iteration-count: 1
+        animation-duration: 0.3s
+        span
+            display: block
+            width: 100%
+            text-align: center
+            color: rgba(#FF0000, 0.7 )
+            img
+                margin-right: 10px
+        h4
+            color: rgba(#FF0000, 0.7 )
+            font-weight: 300
+            margin-top: 10px
+            margin-bottom: 20px
+    &__btnGroup
+        display: flex
+        div
+            min-width: 200px
+            &:not(:first-child)
+                margin-left: 10px
+                
+
+
+
+@keyframes small
+    0%
+        margin-right: -400px
+    100%
+        margin-right: 0px
+
+@keyframes toSmallFromMedium
+    0%
+        margin-right: 400px
+    100%
+        margin-right: 0px
+ 
+    
+
+@keyframes medium
+    0%
+        margin-right: -800px
+    100%
+        margin-right: 0px
+
+@keyframes toMediumFromSmall
+    0%
+        margin-right: -400px
+    100%
+        margin-right: 0px
+
+
+@keyframes large
+    0%
+        margin-right: -1200px
+    100%
+        margin-right: 0px
+
+@keyframes showModalBg
+    0%
+        background: rgba(217,217,217,.1)
+    100%
+        background: rgba(217,217,217,.5) 
+
+@keyframes showConfirm
+    0%
+        scale: 0
+    100%
+        scale: 1
+        

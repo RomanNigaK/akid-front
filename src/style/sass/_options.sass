@@ -1,0 +1,31 @@
+.options
+    .fast-search
+        width: 400px
+        
+    &__parts
+        display: flex
+        margin-top: 30px
+    &__list
+        
+        max-width: 500px
+        min-width: 300px
+        padding-right: 50px
+        b
+            color: $placeholder
+            font-size: 14px
+            display: inline-block
+            margin-top: 10px
+            font-weight: 400
+        ul
+            margin-top: 5px
+            padding-left: 20px
+            li
+                margin-bottom: 5px
+                span
+                    display: block
+                    &::before
+                        content: "\2022"
+                        margin-left: 5px
+                        margin-right: 5px
+                small
+                    color: $placeholder    
